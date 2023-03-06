@@ -1,6 +1,8 @@
 import React from "react";
 import { useCounter } from "../hooks/useCounter";
 import { useFetch } from "../hooks/useFetch";
+import { Loader } from "./Loader";
+import { Quote } from "./Quote";
 
 export const MultipleCustomHooks = () => {
   const { counter, onAdd } = useCounter(1);
@@ -24,18 +26,7 @@ export const MultipleCustomHooks = () => {
           <h2 className="text-center">MultipleCustomHooks</h2>
           <hr />
 
-          {isLoading ? (
-            <div className="alert alert-primary" role="alert">
-              Cargando ...
-            </div>
-          ) : (
-            <figure className="text-end">
-              <blockquote className="blockquote">
-                <p> {quote} </p>
-              </blockquote>
-              <figcaption className="blockquote-footer">{author}</figcaption>
-            </figure>
-          )}
+          {isLoading ? <Loader /> : <Quote quote={quote} author={author} />}
 
           <button
             disabled={isLoading}
