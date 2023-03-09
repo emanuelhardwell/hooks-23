@@ -5,8 +5,9 @@
 // import { MultipleCustomHooks } from "./03-examples/MultipleCustomHooks";
 // import { FocusScreen } from "./04-useRef/FocusScreen";
 // import { Layout } from "./05-useLayoutEffect/Layout";
-import { Memorize } from "./06-react-memo/Memorize";
+// import { Memorize } from "./06-react-memo/Memorize";
+import { Memo } from "./06-useMemo/Memo";
 
 export const App = () => {
-  return <Memorize />;
+  return <Memo />;
 };
