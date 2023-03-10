@@ -7,8 +7,9 @@
 // import { Layout } from "./05-useLayoutEffect/Layout";
 // import { Memorize } from "./06-react-memo/Memorize";
 // import { Memo } from "./06-useMemo/Memo";
-import { CallbackHook } from "./07-useCallback/CallbackHook";
+// import { CallbackHook } from "./07-useCallback/CallbackHook";
+import { CallbackHookWithArguments } from "./07-useCallbackWithArguments/CallbackHookWithArguments";
 
 export const App = () => {
-  return <CallbackHook />;
+  return <CallbackHookWithArguments />;
 };
