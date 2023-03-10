@@ -6,8 +6,9 @@
 // import { FocusScreen } from "./04-useRef/FocusScreen";
 // import { Layout } from "./05-useLayoutEffect/Layout";
 // import { Memorize } from "./06-react-memo/Memorize";
-import { Memo } from "./06-useMemo/Memo";
+// import { Memo } from "./06-useMemo/Memo";
+import { CallbackHook } from "./07-useCallback/CallbackHook";
 
 export const App = () => {
-  return <Memo />;
+  return <CallbackHook />;
 };
