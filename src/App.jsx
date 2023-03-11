@@ -8,8 +8,9 @@
 // import { Memorize } from "./06-react-memo/Memorize";
 // import { Memo } from "./06-useMemo/Memo";
 // import { CallbackHook } from "./07-useCallback/CallbackHook";
-import { CallbackHookWithArguments } from "./07-useCallbackWithArguments/CallbackHookWithArguments";
+// import { CallbackHookWithArguments } from "./07-useCallbackWithArguments/CallbackHookWithArguments";
+import { Padre } from "./07-tarea-memo/Padre";
 
 export const App = () => {
-  return <CallbackHookWithArguments />;
+  return <Padre />;
 };
