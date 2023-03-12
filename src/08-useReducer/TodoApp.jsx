@@ -1,6 +1,7 @@
 import React, { useReducer } from "react";
 import { todoReducer } from "./todoReducer";
 import { v4 as uuidv4 } from "uuid";
+import { TodoList } from "./TodoList";
 
 let todosList = [
   {
@@ -29,17 +30,7 @@ export const TodoApp = () => {
           <h3 className="text-center">Todo list</h3>
           <hr />
 
-          <ul className="list-group mx-5">
-            {todos.map((todo) => (
-              <li
-                key={todo.id}
-                className="list-group-item d-flex justify-content-between"
-              >
-                {todo.name}
-                <button className="btn btn-danger btn-sm">Eliminar</button>
-              </li>
-            ))}
-          </ul>
+          <TodoList todos={todos} />
         </div>
 
         <div className="col-md-4 mt-4">
