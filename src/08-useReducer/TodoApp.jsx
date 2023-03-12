@@ -1,21 +1,22 @@
 import React, { useReducer } from "react";
 import { todoReducer } from "./todoReducer";
+import { v4 as uuidv4 } from "uuid";
 
 let todosList = [
   {
-    id: "1",
+    id: uuidv4(),
     name: "todo one",
     done: false,
   },
   {
-    id: "2",
+    id: uuidv4(),
     name: "todo two",
     done: false,
   },
 ];
 
 export const TodoApp = () => {
-  const [state, dispatch] = useReducer(todoReducer, (todosList = []));
+  const [todos, dispatch] = useReducer(todoReducer, todosList);
 
   return (
     <div className="container">
@@ -27,6 +28,18 @@ export const TodoApp = () => {
         <div className="col-md-8 mt-4">
           <h3 className="text-center">Todo list</h3>
           <hr />
+
+          <ul className="list-group mx-5">
+            {todos.map((todo) => (
+              <li
+                key={todo.id}
+                className="list-group-item d-flex justify-content-between"
+              >
+                {todo.name}
+                <button className="btn btn-danger btn-sm">Eliminar</button>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className="col-md-4 mt-4">
