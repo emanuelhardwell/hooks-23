@@ -9,8 +9,9 @@
 // import { Memo } from "./06-useMemo/Memo";
 // import { CallbackHook } from "./07-useCallback/CallbackHook";
 // import { CallbackHookWithArguments } from "./07-useCallbackWithArguments/CallbackHookWithArguments";
-import { Padre } from "./07-tarea-memo/Padre";
+// import { Padre } from "./07-tarea-memo/Padre";
+import { TodoApp } from "./08-useReducer/TodoApp";
 
 export const App = () => {
-  return <Padre />;
+  return <TodoApp />;
 };
