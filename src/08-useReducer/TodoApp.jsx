@@ -2,6 +2,7 @@ import React, { useReducer } from "react";
 import { todoReducer } from "./todoReducer";
 import { v4 as uuidv4 } from "uuid";
 import { TodoList } from "./TodoList";
+import { TodoTitle } from "./TodoTitle";
 
 let todosList = [
   {
@@ -22,9 +23,7 @@ export const TodoApp = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-md-12 mt-5">
-          <h1 className="text-center text-primary">TodoApp</h1>
-        </div>
+        <TodoTitle />
 
         <div className="col-md-8 mt-4">
           <h3 className="text-center">Todo list</h3>
